@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Why webpack? I honestly don’t hav a good reason. I’ve heard the hype and I’m just trying it out. It has some pretty cool features. It may seem like a bit of overkill looking at the features but hey, I">
+<meta name="keywords" content="journal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building batbelt.js -Part 1 - Setting up the dev environment">
+<meta property="og:url" content="http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/index.html">
+<meta property="og:site_name" content="RWX">
+<meta property="og:description" content="Why webpack? I honestly don’t hav a good reason. I’ve heard the hype and I’m just trying it out. It has some pretty cool features. It may seem like a bit of overkill looking at the features but hey, I">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://imgs.xkcd.com/comics/tools.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*A-_KrEvMuiH7dlwshFw5aw.png">
+<meta property="og:updated_time" content="2018-06-25T14:54:02.822Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building batbelt.js -Part 1 - Setting up the dev environment">
+<meta name="twitter:description" content="Why webpack? I honestly don’t hav a good reason. I’ve heard the hype and I’m just trying it out. It has some pretty cool features. It may seem like a bit of overkill looking at the features but hey, I">
+<meta name="twitter:image" content="https://imgs.xkcd.com/comics/tools.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Building batbelt.js -Part 1 - Setting up the dev environment</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/05/26/batbelt-2-css-manipulation/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/04/22/oss-step2-github/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&text=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&is_video=false&description=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Building batbelt.js -Part 1 - Setting up the dev environment&body=Check out this article: http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&name=Building batbelt.js -Part 1 - Setting up the dev environment&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-webpack"><span class="toc-number">1.</span> <span class="toc-text">Why webpack?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stuff-I-read-on-CommonJS"><span class="toc-number">2.</span> <span class="toc-text">Stuff I read on CommonJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Steps"><span class="toc-number">3.</span> <span class="toc-text">Steps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-number">4.</span> <span class="toc-text">Notes</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Building batbelt.js -Part 1 - Setting up the dev environment
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">RWX</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-05-25T01:14:56.000Z" itemprop="datePublished">May 25 2016</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/journal/">journal</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Why-webpack"><a href="#Why-webpack" class="headerlink" title="Why webpack?"></a>Why webpack?</h2><p><img src="https://imgs.xkcd.com/comics/tools.png" alt="image"></p>
+<p>I honestly don’t hav a good reason. I’ve heard the hype and I’m just trying it out. It has some pretty cool features. It may seem like a bit of overkill looking at the features but hey, I’m try stuff out.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*A-_KrEvMuiH7dlwshFw5aw.png" alt="webpack"></p>
+<h2 id="Stuff-I-read-on-CommonJS"><a href="#Stuff-I-read-on-CommonJS" class="headerlink" title="Stuff I read on CommonJS"></a>Stuff I read on CommonJS</h2><ul>
+<li><a href="http://0fps.net/2013/01/22/commonjs-why-and-how/" target="_blank" rel="noopener">0FPS - CommonJS: Why and How</a></li>
+<li><a href="http://substack.net/node_aesthetic" target="_blank" rel="noopener">node aesthetic by substack</a></li>
+</ul>
+<p>The reference I’m using can be found <a href="https://github.com/petehunt/webpack-howto" target="_blank" rel="noopener">here</a></p>
+<p>Another group references are the <a href="http://webpack.github.io/docs/tutorials/getting-started/" target="_blank" rel="noopener">webpack tutorial</a> and <a href="http://webpack.github.io/docs/" target="_blank" rel="noopener">webpack docs</a></p>
+<h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p><strong>Setting up the directory structure</strong></p>
+<p>I decided to go with something Maven-esque</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">batbeltjs</span><br><span class="line">├── dist</span><br><span class="line">│   └── batbelt.js</span><br><span class="line">├── index.html</span><br><span class="line">├── LICENSE</span><br><span class="line">├── README.md</span><br><span class="line">├── src</span><br><span class="line">│   └── main.js</span><br><span class="line">├── test</span><br><span class="line">└── webpack.config.js</span><br></pre></td></tr></table></figure>
+<p><strong>Write config file</strong></p>
+<p>I’m guessing I might be using a little ES2015 sugar so I’ll be using <code>babel</code> in my webpack config.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-core babel-loader jshint jshint-loader babel-preset-es2015 webpack --save-dev</span><br></pre></td></tr></table></figure>
+<p>This the file I ended up with</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./src/main.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'./dist/batbelt.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    preLoaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">        loader: <span class="string">'jshint-loader'</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">        loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">        query: &#123;</span><br><span class="line">          presets: [<span class="string">'es2015'</span>]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  resolve: &#123;</span><br><span class="line">   extensions: [<span class="string">''</span>,<span class="string">'.js'</span>]</span><br><span class="line"> &#125;,</span><br><span class="line">  watch: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>I tested this setup with the <code>.html</code> file in the file structure above. This may later be used with jasmine test…maybe.</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ul>
+<li>It’s like browserify but can split your app into multiple files. If you have multiple pages in a single-page app, the user only downloads code for just that page. If they go to another page, they don’t redownload common code.<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browserify main.js &gt; bundle.js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>is equal to<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack main.js bundle.js</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>It often replaces grunt or gulp because it can build and bundle CSS, preprocessed CSS, compile-to-JS languages and images, among other things.</li>
+<li>It supports AMD and CommonJS, among other module systems (Angular, ES6)</li>
+<li>webpack allows you to have sort of like build file called <code>webpack.config.js</code> where you export an object configuring how it should work in you project</li>
+<li>Real code can be used in config file!!</li>
+<li><p>webpack allows you to use modules like <strong>loaders</strong>. Popular loaders are <strong>coffee-loader</strong> and <strong>babel-loader</strong> which allows you to compile  <strong>CoffeeScript</strong> and <strong>JSX</strong>(and <strong>ES2015</strong>) code respectively to JavaScript using different presets available on npm.<br>eg.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./main.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'bundle.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123; <span class="attr">test</span>: <span class="regexp">/\.coffee$/</span>, <span class="attr">loader</span>: <span class="string">'coffee-loader'</span> &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">        loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">        query: &#123;</span><br><span class="line">          presets: [<span class="string">'es2015'</span>, <span class="string">'react'</span>]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To require files in webpack with weird extensions without adding the extensions just add <code>resolve.extensions</code> field in your config object.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    <span class="comment">// you can now require('file') instead of require('file.coffee')</span></span><br><span class="line">    extensions: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.json'</span>, <span class="string">'.coffee'</span>]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>To package static content like CSS and images you can use <code>require</code>!!</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'./bootstrap.css'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./myapp.less'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>);</span><br><span class="line">img.src = <span class="built_in">require</span>(<span class="string">'./glyph.png'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>When you require CSS (or less, etc), webpack inlines the CSS as a string inside the JS bundle and <code>require()</code> will insert a <code>&lt;style&gt;</code> tag into the page.</p>
+</li>
+<li>When you require images, webpack inlines a URL to the image into the bundle and returns it from <code>require()</code>.</li>
+<li><p>But loaders make everything better. Checkout the path, publicPath and image loader!!:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./main.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    path: <span class="string">'./build'</span>, <span class="comment">// This is where images AND js will go</span></span><br><span class="line">    publicPath: <span class="string">'http://mycdn.com/'</span>, <span class="comment">// This is used to generate URLs to e.g. images</span></span><br><span class="line">    filename: <span class="string">'bundle.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    loaders: [</span><br><span class="line">      &#123; <span class="attr">test</span>: <span class="regexp">/\.less$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader!less-loader'</span> &#125;, <span class="comment">// use ! to chain loaders</span></span><br><span class="line">      &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">test</span>: <span class="regexp">/\.(png|jpg)$/</span>, <span class="attr">loader</span>: <span class="string">'url-loader?limit=8192'</span> &#125; <span class="comment">// inline base64 URLs for &lt;=8k images, direct URLs for the rest</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Feature flag can be used to filter out feature depending on build parameters since webpack uses uglify to strip out dead-code.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//in code</span></span><br><span class="line"><span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">  <span class="built_in">console</span>.warn(<span class="string">'Extra logging'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">if</span> (__PRERELEASE__) &#123;</span><br><span class="line">  showSecretFeature();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>And then teach webpack:</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// definePlugin takes raw strings and inserts them, so you can put strings of JS if you want.</span></span><br><span class="line"><span class="keyword">var</span> definePlugin = <span class="keyword">new</span> webpack.DefinePlugin(&#123;</span><br><span class="line">  __DEV__: <span class="built_in">JSON</span>.stringify(<span class="built_in">JSON</span>.parse(process.env.BUILD_DEV || <span class="string">'true'</span>)),</span><br><span class="line">  __PRERELEASE__: <span class="built_in">JSON</span>.stringify(<span class="built_in">JSON</span>.parse(process.env.BUILD_PRERELEASE || <span class="string">'false'</span>))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./main.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'bundle.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [definePlugin]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Multiple entry points can be specified for you app to generate multiple bundle files.  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    Profile: <span class="string">'./profile.js'</span>,</span><br><span class="line">    Feed: <span class="string">'./feed.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    path: <span class="string">'build'</span>,</span><br><span class="line">    filename: <span class="string">'[name].js'</span> <span class="comment">// Template based on keys in entry above</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"build/Profile.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Caching for common code between these 2 different bundles is easily done:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> commonsPlugin =</span><br><span class="line">  <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(<span class="string">'common.js'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry:&#123;..&#125;</span><br><span class="line">  output:&#123;..&#125;</span><br><span class="line">  plugins: [commonsPlugin]</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Then use  common.js in a script tag before your bundle.<br>-Async loading is possible but I don’t get it.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-webpack"><span class="toc-number">1.</span> <span class="toc-text">Why webpack?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stuff-I-read-on-CommonJS"><span class="toc-number">2.</span> <span class="toc-text">Stuff I read on CommonJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Steps"><span class="toc-number">3.</span> <span class="toc-text">Steps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-number">4.</span> <span class="toc-text">Notes</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&text=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&is_video=false&description=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Building batbelt.js -Part 1 - Setting up the dev environment&body=Check out this article: http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&title=Building batbelt.js -Part 1 - Setting up the dev environment"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.nanaadane.com/2016/05/25/batbeltjs-1-webpack/&name=Building batbelt.js -Part 1 - Setting up the dev environment&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Nana Adane
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
