@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Git: The intro I’ve been thinking about about getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..o">
+    <meta name="description" content="Git: The intro I’ve been thinking of getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..oooh scary">
 <meta name="keywords" content="journal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A journey into Open Source • Step 1 - Git Mastery">
 <meta property="og:url" content="http://www.nanaadane.com/2016/04/19/oss-step1-git-mastery/index.html">
 <meta property="og:site_name" content="RWX">
-<meta property="og:description" content="Git: The intro I’ve been thinking about about getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..o">
+<meta property="og:description" content="Git: The intro I’ve been thinking of getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..oooh scary">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://imgs.xkcd.com/comics/git.png">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/book/01-introduction/images/local.png">
@@ -21,10 +21,10 @@
 <meta property="og:image" content="http://imgs.xkcd.com/comics/git_commit.png">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/book/A-git-in-other-environments/images/gitk.png">
 <meta property="og:image" content="https://github.com/FredrikNoren/ungit/raw/master/screenshot.png">
-<meta property="og:updated_time" content="2018-06-25T14:54:02.823Z">
+<meta property="og:updated_time" content="2018-09-26T20:50:40.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A journey into Open Source • Step 1 - Git Mastery">
-<meta name="twitter:description" content="Git: The intro I’ve been thinking about about getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..o">
+<meta name="twitter:description" content="Git: The intro I’ve been thinking of getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..oooh scary">
 <meta name="twitter:image" content="https://imgs.xkcd.com/comics/git.png">
     
     
@@ -150,11 +150,11 @@
 
   <div class="content" itemprop="articleBody">
     <h1 id="Git-The-intro"><a href="#Git-The-intro" class="headerlink" title="Git: The intro"></a>Git: The intro</h1><p><img src="https://imgs.xkcd.com/comics/git.png" alt="Git"></p>
-<p>I’ve been thinking about about getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..oooh scary.</p>
+<p>I’ve been thinking of getting into open source for the longest time. To get the procrastination out of the way I decided to blog about  this journey. And publish the posts!!..oooh scary.</p>
 <p>I’m guessing since I’m going to be working with GitHub a lot it’s about time I faced this weird little monster called <code>git</code>.</p>
 <p>Coming from a Java background I used <code>SVN</code>…a lot. It was simple enough to use at work and with an IDE you didn’t even have to know the commands. But <code>git</code> has proven a bit more difficult to master mainly because I hadn’t used it as frequently as I may have wanted. Plus it doesn’t seem as easy to understand as <code>SVN</code> mainly because:</p>
 <blockquote>
-<p>It is a distributed Version Control System (VCS)!!</p>
+<p>It is a distributed Version Control System (VCS)</p>
 </blockquote>
 <p>Which means:</p>
 <ul>
@@ -165,10 +165,10 @@
 <h2 id="VCS-Types"><a href="#VCS-Types" class="headerlink" title="VCS Types"></a>VCS Types</h2><p><img src="https://git-scm.com/book/en/v2/book/01-introduction/images/local.png" alt="Local version control"><br><em>Local version control</em></p>
 <p><img src="https://git-scm.com/book/en/v2/book/01-introduction/images/centralized.png" alt="Centralized version control"><br><em>Centralized version control</em></p>
 <p><img src="https://git-scm.com/book/en/v2/book/01-introduction/images/distributed.png" alt="Distributed version control."><br><em>Distributed version control</em></p>
-<h2 id="Under-The-Hood"><a href="#Under-The-Hood" class="headerlink" title="Under The Hood"></a>Under The Hood</h2><p>This is what <code>git</code> actually does; it manipulates files in your file system based on commands you give it. It manages everything it does logical in a tree structure . The commands I mentioned help you navigate and manipulate the tree structure. One of these commands is  <code>commit</code> which creates a node in this tree.</p>
-<p>Think of the <code>master</code> branch as container for or a grouping of nodes(commits) on the tree with the most recent node on top. <code>HEAD</code>,on the other hand, is a <strong>reference</strong> to the <strong>node</strong> the <code>work space</code> of the repository currently points to. Confusing? Don’t worry it gets clearer.</p>
+<h2 id="Under-The-Hood"><a href="#Under-The-Hood" class="headerlink" title="Under The Hood"></a>Under The Hood</h2><p>This is what <code>git</code> actually does; it manipulates files in your file system based on commands you give it. It manages everything it does logical in a tree structure . The commands I mentioned help you navigate and manipulate the tree structure. One of these commands is <code>commit</code> which creates a node in this tree. A node represents a group of changes to files in the project.</p>
+<p>Think of the <code>master</code> branch as container for or a group of nodes(commits) on the tree with the most recent node on top. <code>HEAD</code>,on the other hand, is a <strong>reference</strong> to the <strong>node</strong> the <code>work space</code> of the repository currently points to. Confusing? Don’t worry it gets clearer.</p>
 <p><img src="http://imgs.xkcd.com/comics/git_commit.png" alt="Tree"></p>
-<h1 id="Getting-My-Hands-Dirty"><a href="#Getting-My-Hands-Dirty" class="headerlink" title="Getting My Hands Dirty"></a>Getting My Hands Dirty</h1><p> <strong>I have a project I’d like to ‘version’ using <code>git</code></strong>.</p>
+<h1 id="Getting-My-Hands-Dirty"><a href="#Getting-My-Hands-Dirty" class="headerlink" title="Getting My Hands Dirty"></a>Getting My Hands Dirty</h1><p> <strong>I have a project I’d like to ‘version’ it using <code>git</code></strong>.</p>
 <p>Easy!</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Setup git</span></span><br><span class="line">git config --global user.name <span class="string">"Nana Adane"</span></span><br><span class="line">git config --global user.email <span class="string">"nanaofosuheneadane@gmail.com"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Pop into the directory</span></span><br><span class="line"><span class="built_in">cd</span> git-test</span><br><span class="line"></span><br><span class="line"><span class="comment">#And run</span></span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p><strong>What if someone gave me a link to a project I want to contribute to?</strong></p>
@@ -179,8 +179,8 @@
 <p><strong>I have a project. How do I add stuff?</strong></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Create a file</span></span><br><span class="line">touch hello.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'Hello,World'</span> &gt; hello.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#Add the file.</span></span><br><span class="line">git add hello.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#Commit it</span></span><br><span class="line">git commit -m <span class="string">'Add new file'</span></span><br><span class="line"><span class="comment">#N/B: It's a common convention to use presence when writing commit messages</span></span><br></pre></td></tr></table></figure>
 <p><strong>I want to create a new feature in my project</strong></p>
-<p><code>Git</code> is highly optimized for branching and merging quickly. Branches aren’t copies of the working directory folder. Instead they are just another grouping of nodes on the tree. <code>Git</code> keeps track of branch changes with the same folder as the working directory and makes changes to the working directory when new branch is checked out.</p>
-<p>Conventionally new features to a project are created in a branch. Feature branches are then merged into the master branch after testing and then deleted. <code>Git</code> allows us to do this quickly and easily because now files are actually copied.</p>
+<p><code>Git</code> is highly optimized for branching and merging quickly. Branches aren’t copies of the working directory folder. Instead they are just another grouping of nodes on the tree. <code>Git</code> keeps track of branch changes within the same folder as the working directory and makes changes to the working directory when new branch is checked out.</p>
+<p>Conventionally new features for a project are created in a branch. Feature branches are then merged into the master branch after testing and then deleted. <code>Git</code> allows us to do this quickly and easily because no files are actually copied.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Create new branch</span></span><br><span class="line">git branch new-file-feature</span><br><span class="line"></span><br><span class="line"><span class="comment">#List current branches. The branch you're on is indicated by *</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment">#Checkout/switch to the branch you created</span></span><br><span class="line">git checkout new-file-feature</span><br><span class="line"></span><br><span class="line"><span class="comment">#Write some code and commit</span></span><br><span class="line">touch new-file.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Starts out in only 'new-file-feature branch'"</span> &gt; new-file.txt</span><br><span class="line">git add new-file.txt</span><br><span class="line">git commit -m <span class="string">"Add a new file"</span></span><br></pre></td></tr></table></figure>
 <p><strong>Oh no! I have conflict. How do I merge?</strong></p>
 <p>A conflict occurs when two or more sets of changes are made to the same file. For <code>git</code> this usually happens when you attempt to merge changes from two branches that have changes to the same files. A merge copies nodes of the tree contained within a branch into another branch. Conflicts can be resolved manually by editing the file in conflict and committing it.</p>
@@ -250,6 +250,12 @@
 
   </div>
 </article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
 
 
 
@@ -341,5 +347,17 @@
 <!-- Baidu Analytics -->
 
 <!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'readwriteexecute';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
 
 

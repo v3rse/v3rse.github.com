@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://www.nanaadane.com/images/mongo-setup-ssl.png">
 <meta property="og:image" content="http://www.nanaadane.com/images/mongo-test-connection.png">
 <meta property="og:image" content="http://www.nanaadane.com/images/mongo-open-shell.png">
-<meta property="og:updated_time" content="2018-09-26T10:16:40.575Z">
+<meta property="og:updated_time" content="2018-09-26T21:00:43.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Connecting Robo 3T to MongoDB Atlas">
 <meta name="twitter:description" content="This little tip is to help anyone struggling with connecting to MongoDB Atlas like I did.   MongoDB Atlas provides a managed MongoDB database service for various web applications. From time to time y">
@@ -163,11 +163,16 @@
 <p>If you haven’t downloaded Robo 3T please do. Also, I’m assuming you already have a MongoDB Atlas account.</p>
 </blockquote>
 <ol>
-<li>Retrieve your connection link. Click the <em>Connect</em> button.<br><img src="/images/mongo-connect.png" alt="connect"></li>
-<li>Create a new connection. Enter your the host details in Robo 3T.<br><img src="/images/mongo-enter-host.png" alt="enter host"></li>
-<li>Enter your credentials.<br><img src="/images/mongo-enter-credentials.png" alt="enter credentials"></li>
-<li>Setup SSL.<br><img src="/images/mongo-setup-ssl.png" alt="setup ssl"></li>
-<li>Test the connection.<br><img src="/images/mongo-test-connection.png" alt="test connection"></li>
+<li><p>Retrieve your connection link. Click the <em>Connect</em> button.<br><img src="/images/mongo-connect.png" alt="connect"></p>
+</li>
+<li><p>Create a new connection. Enter your the host details in Robo 3T.<br><img src="/images/mongo-enter-host.png" alt="enter host"></p>
+</li>
+<li><p>Enter your credentials.<br><img src="/images/mongo-enter-credentials.png" alt="enter credentials"></p>
+</li>
+<li><p>Setup SSL. I didn’t need a pem cert/key in my case. All I had to do was select <code>Self-signed Certificate</code>.<br><img src="/images/mongo-setup-ssl.png" alt="setup ssl"></p>
+</li>
+<li><p>Test the connection.<br><img src="/images/mongo-test-connection.png" alt="test connection"></p>
+</li>
 </ol>
 <h4 id="A-side-note"><a href="#A-side-note" class="headerlink" title="A side note"></a>A side note</h4><p>I had a little issue when setting mine up. In my case, after connecting, my databases weren’t listing because of misconfigured permission. My work around here was to use the DB <a href="https://gist.github.com/amirkheirabadi/5859662" target="_blank" rel="noopener">shell commands</a> (since Robo 3T gives you an actually open a shell as opposed to Compass). I did the following to know my list of collections:</p>
 <ul>
@@ -178,9 +183,16 @@
 <p>After that you can run any command you need. e.g.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.getCollection(<span class="string">'todos'</span>).find(&#123;<span class="attr">status</span>: <span class="string">'done'</span>&#125;)</span><br></pre></td></tr></table></figure>
 <p>Hope this saves someone sometime.</p>
+<p><strong>Happy Coding</strong></p>
 
   </div>
 </article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
 
 
 
@@ -272,5 +284,17 @@
 <!-- Baidu Analytics -->
 
 <!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'readwriteexecute';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
 
 
