@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Connecting Robo 3T to MongoDB Atlas</title>
+      <link href="./links/main.css" rel="stylesheet">
+    </head>
+    <body>
+      <header> <h1>Connecting Robo 3T to MongoDB Atlas</h1> </header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">back to index</a></li><li><a href="CNAME.html"><strong>CNAME</strong></a></li><li><strong><em>connecting-robo-3t-to-mongo-atlas</strong></em></li><li><a href="in-the-beginning.html"><strong>in-the-beginning</strong></a></li>
+        </ul>
+      </nav>
+      <main><p><em>"This little tip is to help anyone struggling with connecting to MongoDB Atlas like I did."</em>
+</p>
+<p><img src=http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef0148c80ac6ef970c-800wi alt=nosql></p>
+<p>MongoDB Atlas provides a managed MongoDB database service for various web applications. From time to time you may want to see whats happening in your database whether in your stage or production environment. There are a number of options when it comes to MongoDB clients. Some are listed below:</p>
+<ul>
+  <li><a href=https://studio3t.com/>Studio 3T</a></li>
+  <li><a href=https://www.mongodb.com/products/compass>MongoDB Compass</a></li>
+  <li><a href=https://robomongo.org/>Robo 3T</a> (formerly Robomongo]</li>
+</ul>
+<p>The first is a piece of commercial software. Since we aim to be frugal I won't talk about it much. I do think you should give it a try. It is a great tool for database administrators. The last two are free. I started using Robo 3T in its Robomongo days when I'd just started using MongoDB so I'm more used to its interface. I used Compass a bit because that's what Atlas suggests you use but I didn't like the web-like interface (it felt a pit flakey].</p>
+<p>The sad thing is that it is difficult to connect to Atlas using Robo 3T as opposed to Studio 3T and Compass. Both Compass and Studio 3T provide a feature that allows you to autofill the connection form fields using the connection link provided on Atlas. Alright enough talk let's get down to it.</p>
+<h4>Steps</h4>
+<p><em>"If you haven't downloaded Robo 3T please do. Also, I'm assuming you already have a MongoDB Atlas account."</em>
+</p>
+<ol>
+  <li>Retrieve your connection link. Click the <em>Connect</em>
+ button.</li>
+  <li>Create a new connection. Enter your the host details in Robo 3T.</li>
+  <li>Enter your credentials.</li>
+  <li>Setup SSL. I didn't need a pem cert/key in my case. All I had to do was select <code>Self-signed Certificate</code>
+.</li>
+  <li>Test the connection.</li>
+</ol>
+<p><img src=media/mongo-connect.png alt=connect></p>
+<p><img src=media/mongo-enter-host.png alt=enter host></p>
+<p><img src=media/mongo-enter-credentials.png alt=enter credentials></p>
+<p><img src=media/mongo-setup-ssl.png alt=setup ssl></p>
+<p><img src=media/mongo-test-connection.png alt=test connection></p>
+<h4>A side note</h4>
+<p>I had a little issue when setting mine up. In my case, after connecting, my databases weren't listing because of misconfigured permission. My work around here was to use the DB <a href=https://gist.github.com/amirkheirabadi/5859662>shell commands</a> (since Robo 3T gives you an actually open a shell as opposed to Compass). I did the following to know my list of collections:</p>
+<ul>
+  <li>Open a new shell</li>
+  <li>Run <code>use [database-names]</code>
+</li>
+  <li>List the collection using <code>show collections</code>
+</li>
+</ul>
+<p><img src=media/mongo-open-shell.png alt=open shell></p>
+<p>After that you can run any command you need. e.g.</p>
+<pre>
+ db.getCollection('todos'].find({status: 'done'})
+</pre>
+<p>Hope this saves someone sometime.</p>
+<p><strong>Happy Coding</strong>
+</p>
+</main>
+      <footer>
+        Edited on wednesday, 26 september 2018, 10:16
+      </footer>
+    </body>
+  </html>
+  
