@@ -4,11 +4,43 @@
  <description>this is my small corner of the universe</description>
  <link>https://www.nanaadane.com/</link>
  <copyright>2022 Nana Adane All rights reserved</copyright>
- <lastBuildDate>Wed May 25 2022 20:19:19 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
- <pubDate>Wed May 25 2022 20:19:19 GMT+0000 (Greenwich Mean Time)</pubDate>
+ <lastBuildDate>Thu May 26 2022 00:45:15 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
+ <pubDate>Thu May 26 2022 00:45:15 GMT+0000 (Greenwich Mean Time)</pubDate>
  <ttl>1440</ttl>
  <generator>binder</generator>
 
+<item>
+  <title>log</title>
+  <description>entries about my daily life and general writing</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/log.html</link>
+  <guid isPermaLink="false">10</guid>
+  <pubDate>Wed May 25 2022 22:59:25 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>audio</title>
+  <description>entries related to music, sound design,  audio production, mixing and mastering</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/audio.html</link>
+  <guid isPermaLink="false">9</guid>
+  <pubDate>Wed May 25 2022 22:49:54 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>visual</title>
+  <description>entries related to art, games, videography and photography</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/visual.html</link>
+  <guid isPermaLink="false">8</guid>
+  <pubDate>Wed May 25 2022 22:48:13 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>tools</title>
+  <description>software tools i built</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/tools.html</link>
+  <guid isPermaLink="false">7</guid>
+  <pubDate>Wed May 25 2022 22:45:58 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
 <item>
   <title>rus</title>
   <description>an rss feed reader for the command line</description>
@@ -18,10 +50,10 @@
   <pubDate>Wed May 25 2022 05:55:57 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
 <item>
-  <title>software</title>
+  <title>code</title>
   <description>software related entries</description>
   <author>Nana Adane</author>
-  <link>https://www.nanaadane.com/software.html</link>
+  <link>https://www.nanaadane.com/code.html</link>
   <guid isPermaLink="false">5</guid>
   <pubDate>Wed May 25 2022 05:11:51 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
