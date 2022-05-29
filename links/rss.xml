@@ -4,8 +4,8 @@
  <description>this is my small corner of the universe</description>
  <link>https://www.nanaadane.com/</link>
  <copyright>2022 Nana Adane All rights reserved</copyright>
- <lastBuildDate>Thu May 26 2022 02:48:02 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
- <pubDate>Thu May 26 2022 02:48:02 GMT+0000 (Greenwich Mean Time)</pubDate>
+ <lastBuildDate>Sun May 29 2022 04:28:22 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
+ <pubDate>Sun May 29 2022 04:28:22 GMT+0000 (Greenwich Mean Time)</pubDate>
  <ttl>1440</ttl>
  <generator>binder</generator>
 
@@ -50,10 +50,10 @@
   <pubDate>Wed May 25 2022 05:55:57 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
 <item>
-  <title>code</title>
-  <description>software related entries</description>
+  <title>eng</title>
+  <description>engineer and science related entries</description>
   <author>Nana Adane</author>
-  <link>https://www.nanaadane.com/code.html</link>
+  <link>https://www.nanaadane.com/eng.html</link>
   <guid isPermaLink="false">5</guid>
   <pubDate>Wed May 25 2022 05:11:51 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
