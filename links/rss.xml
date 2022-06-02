@@ -1,41 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
  <title>nanaadane's wiki</title>
  <description>this is my small corner of the universe</description>
  <link>https://www.nanaadane.com/</link>
  <copyright>2022 Nana Adane All rights reserved</copyright>
- <lastBuildDate>Sun May 29 2022 04:28:22 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
- <pubDate>Sun May 29 2022 04:28:22 GMT+0000 (Greenwich Mean Time)</pubDate>
+ <lastBuildDate>Thu Jun 02 2022 10:59:03 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
+ <pubDate>Thu Jun 02 2022 10:59:03 GMT+0000 (Greenwich Mean Time)</pubDate>
  <ttl>1440</ttl>
  <generator>binder</generator>
 
+<item>
+  <title>rss</title>
+  <description>really simple syndication or rdf site summary</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/rss.html</link>
+  <guid isPermaLink="false">10</guid>
+  <pubDate>Thu Jun 02 2022 06:05:21 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>knowledge</title>
+  <description>stuff i've learnt</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/knowledge.html</link>
+  <guid isPermaLink="false">9</guid>
+  <pubDate>Thu Jun 02 2022 05:42:18 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
 <item>
   <title>log</title>
   <description>entries about my daily life and general writing</description>
   <author>Nana Adane</author>
   <link>https://www.nanaadane.com/log.html</link>
-  <guid isPermaLink="false">10</guid>
+  <guid isPermaLink="false">8</guid>
   <pubDate>Wed May 25 2022 22:59:25 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
 <item>
-  <title>audio</title>
-  <description>entries related to music, sound design,  audio production, mixing and mastering</description>
-  <author>Nana Adane</author>
-  <link>https://www.nanaadane.com/audio.html</link>
-  <guid isPermaLink="false">9</guid>
-  <pubDate>Wed May 25 2022 22:49:54 GMT+0000 (Greenwich Mean Time)</pubDate>
- </item>
-<item>
-  <title>visual</title>
-  <description>entries related to art, games, videography and photography</description>
-  <author>Nana Adane</author>
-  <link>https://www.nanaadane.com/visual.html</link>
-  <guid isPermaLink="false">8</guid>
-  <pubDate>Wed May 25 2022 22:48:13 GMT+0000 (Greenwich Mean Time)</pubDate>
- </item>
-<item>
   <title>tools</title>
-  <description>software tools i built</description>
+  <description>tools i built</description>
   <author>Nana Adane</author>
   <link>https://www.nanaadane.com/tools.html</link>
   <guid isPermaLink="false">7</guid>
@@ -50,10 +51,10 @@
   <pubDate>Wed May 25 2022 05:55:57 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
 <item>
-  <title>eng</title>
-  <description>engineer and science related entries</description>
+  <title>projects</title>
+  <description>things i made</description>
   <author>Nana Adane</author>
-  <link>https://www.nanaadane.com/eng.html</link>
+  <link>https://www.nanaadane.com/projects.html</link>
   <guid isPermaLink="false">5</guid>
   <pubDate>Wed May 25 2022 05:11:51 GMT+0000 (Greenwich Mean Time)</pubDate>
  </item>
