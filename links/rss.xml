@@ -5,11 +5,27 @@
  <description>this is my small corner of the universe</description>
  <link>https://www.nanaadane.com/</link>
  <copyright>2022 Nana Adane All rights reserved</copyright>
- <lastBuildDate>Fri Jun 03 2022 05:53:43 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
- <pubDate>Fri Jun 03 2022 05:53:43 GMT+0000 (Greenwich Mean Time)</pubDate>
+ <lastBuildDate>Wed Jun 29 2022 17:10:49 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
+ <pubDate>Wed Jun 29 2022 17:10:49 GMT+0000 (Greenwich Mean Time)</pubDate>
  <ttl>1440</ttl>
  <generator>binder</generator>
 
+<item>
+  <title>linux</title>
+  <description></description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/linux.html</link>
+  <guid isPermaLink="false">12</guid>
+  <pubDate>Wed Jun 29 2022 17:01:20 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>eww (ElKowar's Wacky Widgets)</title>
+  <description>a rust based widget system with a lisp (s-expression) based widget configuration and SCSS styling</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/eww.html</link>
+  <guid isPermaLink="false">11</guid>
+  <pubDate>Wed Jun 29 2022 17:00:50 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
 <item>
   <title>rss</title>
   <description>really simple syndication or rdf site summary</description>
