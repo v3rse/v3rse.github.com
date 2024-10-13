@@ -5,11 +5,51 @@
  <description>this is my small corner of the universe</description>
  <link>https://www.nanaadane.com/</link>
  <copyright>2022 Nana Adane All rights reserved</copyright>
- <lastBuildDate>Wed Jun 29 2022 17:10:49 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
- <pubDate>Wed Jun 29 2022 17:10:49 GMT+0000 (Greenwich Mean Time)</pubDate>
+ <lastBuildDate>Sun Oct 13 2024 16:22:45 GMT+0000 (Greenwich Mean Time)</lastBuildDate>
+ <pubDate>Sun Oct 13 2024 16:22:45 GMT+0000 (Greenwich Mean Time)</pubDate>
  <ttl>1440</ttl>
  <generator>binder</generator>
 
+<item>
+  <title>games</title>
+  <description>exploring game development over time</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/games.html</link>
+  <guid isPermaLink="false">17</guid>
+  <pubDate>Thu Jan 04 2024 00:13:14 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>dwarf-fortress</title>
+  <description>an exploration of the dwarf fortress game</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/dwarf-fortress.html</link>
+  <guid isPermaLink="false">16</guid>
+  <pubDate>Thu Dec 21 2023 14:03:01 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>uxntal</title>
+  <description>the stack based programming langauge for uxn</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/uxntal.html</link>
+  <guid isPermaLink="false">15</guid>
+  <pubDate>Tue Dec 12 2023 21:12:15 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>uxn</title>
+  <description>a stack machine</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/uxn.html</link>
+  <guid isPermaLink="false">14</guid>
+  <pubDate>Tue Dec 12 2023 21:10:36 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
+<item>
+  <title>varvara</title>
+  <description>a device specification for a personal computer running on the uxn machine</description>
+  <author>Nana Adane</author>
+  <link>https://www.nanaadane.com/varvara.html</link>
+  <guid isPermaLink="false">13</guid>
+  <pubDate>Tue Dec 12 2023 21:08:49 GMT+0000 (Greenwich Mean Time)</pubDate>
+ </item>
 <item>
   <title>linux</title>
   <description></description>
