@@ -15,66 +15,27 @@
         </header>
         <main>
           <h1>rss</h1>
-          <p><a href=https://www.dictionary.com/browse/syndication target="_blank" rel="noopener norefferer">Syndication</a>: <em>the state or fact of being published simultaneously, or supplied for simultaneous publication, in a number of newspapers or other periodicals:</em>
+          <p><a href="https://www.dictionary.com/browse/syndication" target="_blank" rel="noopener norefferer">Syndication</a>: <em>the state or fact of being published simultaneously, or supplied for simultaneous publication, in a number of newspapers or other periodicals:</em>
 </p>
 <h2>Intro</h2>
 <p>RSS is one of many attempts to create a web syndication format. It allows publishers of web content like blogs, news sites and podcasts to share updates to their content with users (using feed readers) and even other sites (such as aggregators).</p>
-<p>An RSS feed is basically an XML-formatted document,, and it's pretty much human-readable. Check a portion of <a href=https://www.nanaadane.com/links/rss.xml target="_blank" rel="noopener norefferer">this site's RSS feed</a> below:</p>
+<p>An RSS feed is basically an XML-formatted document,, and it's pretty much human-readable. Check a portion of <a href="https://www.nanaadane.com/links/rss.xml" target="_blank" rel="noopener norefferer">this site's RSS feed</a> below:</p>
 <pre>
- &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
- &lt;rss version=&quot;2.0&quot;&gt;
- &lt;channel&gt;
-   &lt;title&gt;nanaadane's wiki&lt;/title&gt;
-   &lt;description&gt;this is my small corner of the universe&lt;/description&gt;
-   &lt;link&gt;https://www.nanaadane.com/&lt;/link&gt;
-   &lt;copyright&gt;2022 Nana Adane All rights reserved&lt;/copyright&gt;
-   &lt;lastBuildDate&gt;Thu Jun 02 2022 06:52:51 GMT+0000 (Greenwich Mean Time)&lt;/lastBuildDate&gt;
-   &lt;pubDate&gt;Thu Jun 02 2022 06:52:51 GMT+0000 (Greenwich Mean Time)&lt;/pubDate&gt;
-   &lt;ttl&gt;1440&lt;/ttl&gt;
-   &lt;generator&gt;binder&lt;/generator&gt;
-   &lt;item&gt;
-     &lt;title&gt;rss&lt;/title&gt;
-     &lt;description&gt;really simple syndication or rdf site summary&lt;/description&gt;
-     &lt;author&gt;Nana Adane&lt;/author&gt;
-     &lt;link&gt;https://www.nanaadane.com/rss.html&lt;/link&gt;
-     &lt;guid isPermaLink=&quot;false&quot;&gt;10&lt;/guid&gt;
-     &lt;pubDate&gt;Thu Jun 02 2022 06:05:21 GMT+0000 (Greenwich Mean Time)&lt;/pubDate&gt;
-   &lt;/item&gt;
- &lt;/channel&gt;
-</pre>
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>nanaadane's wiki</title><description>this is my small corner of the universe</description><link>https://www.nanaadane.com/</link><copyright>2022 Nana Adane All rights reserved</copyright><lastBuildDate>Thu Jun 02 2022 06:52:51 GMT+0000 (Greenwich Mean Time)</lastBuildDate><pubDate>Thu Jun 02 2022 06:52:51 GMT+0000 (Greenwich Mean Time)</pubDate><ttl>1440</ttl><generator>binder</generator><item><title>rss</title><description>really simple syndication or rdf site summary</description><author>Nana Adane</author><link>https://www.nanaadane.com/rss.html</link><guid isPermaLink="false">10</guid><pubDate>Thu Jun 02 2022 06:05:21 GMT+0000 (Greenwich Mean Time)</pubDate></item></channel></pre>
 <h2>Versions</h2>
-<p>As seen in the above example, RSS comes in different format versions. The common list of formats that most clients and <a href=https://github.com/rbren/rss-parser/blob/master/lib/parser.js#L48 target="_blank" rel="noopener norefferer">parsers</a> support are as follows (each with their own peculiarities):</p>
+<p>As seen in the above example, RSS comes in different format versions. The common list of formats that most clients and <a href="https://github.com/rbren/rss-parser/blob/master/lib/parser.js#L48" target="_blank" rel="noopener norefferer">parsers</a> support are as follows (each with their own peculiarities):</p>
 <ul>
   <li>RSS v0.91 (the original from 1999)</li>
   <li>RSS v1.0 (based W3C Resource Description Framework - RDF. Hence, why it's called RDF Site Summary)</li>
   <li>RSS v2.0 (very similar to 0.9x but with namespace module and six additional optional elements)</li>
 </ul>
-<p>There are other non-RSS feed formats like <a href=https://en.wikipedia.org/wiki/Atom_(Web_standard) target="_blank" rel="noopener norefferer">Atom</a> and <a href=https://www.jsonfeed.org/ target="_blank" rel="noopener norefferer">JSON Feed</a> which are also used on some sites.</p>
+<p>There are other non-RSS feed formats like <a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)" target="_blank" rel="noopener norefferer">Atom</a> and <a href="https://www.jsonfeed.org/" target="_blank" rel="noopener norefferer">JSON Feed</a> which are also used on some sites.</p>
 <p><strong>Atom</strong>
  is a popular alternative to using RSS v2.0 because it's less ambiguous:</p>
 <pre>
- &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
- &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot;&gt;
- 	&lt;title&gt;{{FEED_NAME}}&lt;/title&gt;
- 	&lt;id&gt;{{HOMEPAGE_URL}}&lt;/id&gt;
- 	&lt;link rel=&quot;alternate&quot; href=&quot;HOMEPAGE_URL&quot;/&gt;
- 	&lt;link href=&quot;FEED_URL&quot; rel=&quot;self&quot;/&gt;
- 	&lt;updated&gt;{{LAST_UPDATE_TIME in RFC3339 format}}&lt;/updated&gt;
- 	&lt;author&gt;
- 		&lt;name&gt;{{AUTHOR_NAME}}&lt;/name&gt;
- 	&lt;/author&gt;
- 	&lt;entry&gt;
- 		&lt;title&gt;{{ENTRY.TITLE}}&lt;/title&gt;
- 		&lt;link rel=&quot;alternate&quot; type=&quot;text/html&quot; href=&quot;{{ENTRY.HTML_URL}}&quot;/&gt;
- 		&lt;id&gt;{{ENTRY.PERMALINK}}&lt;/id&gt;
- 		&lt;published&gt;{{ENTRY.FIRST_POST_TIME in RFC3339 format}}&lt;/published&gt;
- 		&lt;updated&gt;{{ENTRY.LAST_UPDATE_TIME in RFC3339 format}}&lt;/updated&gt;
- 		&lt;content type=&quot;html&quot;&gt;{{ENTRY.HTML}}&lt;/content&gt;
- 	&lt;/entry&gt;
- &lt;/feed&gt;
-</pre>
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>{{FEED_NAME}}</title><id>{{HOMEPAGE_URL}}</id><link rel="alternate" href="HOMEPAGE_URL"/><link href="FEED_URL" rel="self"/><updated>{{LAST_UPDATE_TIME in RFC3339 format}}</updated><author><name>{{AUTHOR_NAME}}</name></author><entry><title>{{ENTRY.TITLE}}</title><link rel="alternate" type="text/html" href="{{ENTRY.HTML_URL}}"/><id>{{ENTRY.PERMALINK}}</id><published>{{ENTRY.FIRST_POST_TIME in RFC3339 format}}</published><updated>{{ENTRY.LAST_UPDATE_TIME in RFC3339 format}}</updated><content type="html">{{ENTRY.HTML}}</content></entry></feed></pre>
 <h2>Specification</h2>
-<p>The <a href=https://validator.w3.org/feed/docs/rss2.html target="_blank" rel="noopener norefferer">W3 specification for RSS v2.0</a> defines the structure of a document and provides descriptions for the various fields in a document.</p>
+<p>The <a href="https://validator.w3.org/feed/docs/rss2.html" target="_blank" rel="noopener norefferer">W3 specification for RSS v2.0</a> defines the structure of a document and provides descriptions for the various fields in a document.</p>
 <h2>Best Practices</h2>
 <p>When building your own feed or feed generator (like the one in use for this site) the specification comes in very handy. As with many things, however, there are a some best practice to follow:</p>
 <ul>
@@ -89,8 +50,9 @@
  in the feed is recommended, although not always practiced.</li>
   <li>entry IDs should never change and should be unique</li>
 </ul>
-<p>A more detailed list of best practices can be found <a href=https://kevincox.ca/2022/05/06/rss-feed-best-practices/ target="_blank" rel="noopener norefferer">here</a></p>
+<p>A more detailed list of best practices can be found <a href="https://kevincox.ca/2022/05/06/rss-feed-best-practices/" target="_blank" rel="noopener norefferer">here</a></p>
 
+          
           
 
 

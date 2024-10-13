@@ -17,12 +17,12 @@
           <h1>Connecting Robo 3T to MongoDB Atlas</h1>
           <p><em>"This little tip is to help anyone struggling with connecting to MongoDB Atlas like I did."</em>
 </p>
-<p><img src=http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef0148c80ac6ef970c-800wi alt=nosql></p>
+<p><img src="http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef0148c80ac6ef970c-800wi" alt="nosql"></p>
 <p>MongoDB Atlas provides a managed MongoDB database service for various web applications. From time to time you may want to see whats happening in your database whether in your stage or production environment. There are a number of options when it comes to MongoDB clients. Some are listed below:</p>
 <ul>
-  <li><a href=https://studio3t.com/ target="_blank" rel="noopener norefferer">Studio 3T</a></li>
-  <li><a href=https://www.mongodb.com/products/compass target="_blank" rel="noopener norefferer">MongoDB Compass</a></li>
-  <li><a href=https://robomongo.org/ target="_blank" rel="noopener norefferer">Robo 3T</a> (formerly Robomongo]</li>
+  <li><a href="https://studio3t.com/" target="_blank" rel="noopener norefferer">Studio 3T</a></li>
+  <li><a href="https://www.mongodb.com/products/compass" target="_blank" rel="noopener norefferer">MongoDB Compass</a></li>
+  <li><a href="https://robomongo.org/" target="_blank" rel="noopener norefferer">Robo 3T</a> (formerly Robomongo]</li>
 </ul>
 <p>The first is a piece of commercial software. Since we aim to be frugal I won't talk about it much. I do think you should give it a try. It is a great tool for database administrators. The last two are free. I started using Robo 3T in its Robomongo days when I'd just started using MongoDB so I'm more used to its interface. I used Compass a bit because that's what Atlas suggests you use but I didn't like the web-like interface (it felt a pit flakey].</p>
 <p>The sad thing is that it is difficult to connect to Atlas using Robo 3T as opposed to Studio 3T and Compass. Both Compass and Studio 3T provide a feature that allows you to autofill the connection form fields using the connection link provided on Atlas. Alright enough talk let's get down to it.</p>
@@ -38,13 +38,13 @@
 .</li>
   <li>Test the connection.</li>
 </ol>
-<p><img src=media/mongo-connect.png alt=connect></p>
-<p><img src=media/mongo-enter-host.png alt=enter host></p>
-<p><img src=media/mongo-enter-credentials.png alt=enter credentials></p>
-<p><img src=media/mongo-setup-ssl.png alt=setup ssl></p>
-<p><img src=media/mongo-test-connection.png alt=test connection></p>
+<p><img src="media/mongo-connect.png" alt="connect"></p>
+<p><img src="media/mongo-enter-host.png" alt="enter host"></p>
+<p><img src="media/mongo-enter-credentials.png" alt="enter credentials"></p>
+<p><img src="media/mongo-setup-ssl.png" alt="setup ssl"></p>
+<p><img src="media/mongo-test-connection.png" alt="test connection"></p>
 <h4>A side note</h4>
-<p>I had a little issue when setting mine up. In my case, after connecting, my databases weren't listing because of misconfigured permission. My work around here was to use the DB <a href=https://gist.github.com/amirkheirabadi/5859662 target="_blank" rel="noopener norefferer">shell commands</a> (since Robo 3T gives you an actually open a shell as opposed to Compass). I did the following to know my list of collections:</p>
+<p>I had a little issue when setting mine up. In my case, after connecting, my databases weren't listing because of misconfigured permission. My work around here was to use the DB <a href="https://gist.github.com/amirkheirabadi/5859662" target="_blank" rel="noopener norefferer">shell commands</a> (since Robo 3T gives you an actually open a shell as opposed to Compass). I did the following to know my list of collections:</p>
 <ul>
   <li>Open a new shell</li>
   <li>Run <code>use [database-names]</code>
@@ -52,7 +52,7 @@
   <li>List the collection using <code>show collections</code>
 </li>
 </ul>
-<p><img src=media/mongo-open-shell.png alt=open shell></p>
+<p><img src="media/mongo-open-shell.png" alt="open shell"></p>
 <p>After that you can run any command you need. e.g.</p>
 <pre>
  db.getCollection('todos'].find({status: 'done'})
@@ -61,6 +61,7 @@
 <p><strong>Happy Coding</strong>
 </p>
 
+          
           
 
 
