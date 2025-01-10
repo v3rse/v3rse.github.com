@@ -9,17 +9,17 @@ nav { float:right; font-size: 15px; }
 nav ul { float:left; }
 nav ul li { list-style-type: none; white-space: pre; }
 
-main { clear: both; }
-main img { width:100; max-width:700px; padding: 15px; }
-main ul li { list-style-type: square; }
-main a { color: antiquewhite; }
-main time { color: grey; }
-main > ul { line-height: 25px; }
-main > ol { line-height: 25px; }
-main > p { line-height: 25px; }
+.content { clear: both; }
+.content img { width:100; max-width:700px; padding: 15px; }
+.content ul li { list-style-type: square; }
+.content a { color: antiquewhite; }
+.content time { color: grey; }
+.content > ul { line-height: 25px; }
+.content > ol { line-height: 25px; }
+.content > p { line-height: 25px; }
 
-main > pre { font-family: monospace; padding: 15px; background: grey; white-space: pre-wrap; }
-main ul li code { font-family: monospace; background: grey; padding: 0 5px 2px 5px; }
+.content > pre { font-family: monospace; padding: 15px; background: grey; white-space: pre-wrap; }
+.content ul li code { font-family: monospace; background: grey; padding: 0 5px 2px 5px; }
 
 h1,h2,h3,h4,h5,h6 { padding-top: 30px; }
 
